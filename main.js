@@ -47,4 +47,9 @@ class Playground {
   })
 
   engine.runRenderLoop(() => scene.render())
+
+  // resize if the screen is resized/rotated
+  window.addEventListener('resize', () => {
+    engine.resize()
+  })
 })(document.getElementsByTagName('canvas')[0])
